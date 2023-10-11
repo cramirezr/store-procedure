@@ -1,11 +1,17 @@
+package org.cramirezr.procedures;
+
 import java.sql.*;
 
 public class DBProcRequestForgottenPassw implements RequestorForgottenPassw {
 
     private final String dbUrl;
+    private final String user;
+    private final String password;
 
-    public  DBProcRequestForgottenPassw(String dbUrl) {
+    public  DBProcRequestForgottenPassw(String dbUrl, String user, String password) {
         this.dbUrl = dbUrl;
+        this.user = user;
+        this.password = password;
     }
 
     @Override
